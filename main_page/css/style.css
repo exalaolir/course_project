@@ -1,0 +1,82 @@
+html {
+  font-family: "Sen", sans-serif;
+  font-optical-sizing: auto;
+}
+
+body {
+  background-color: #0A0511;
+  margin: 0;
+  color: #FFFFFF;
+}
+
+p {
+  margin: 0;
+}
+
+a, a:link, a:visited, a:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.header {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+  padding: 20px 72px 20px 72px;
+}
+@media only screen and (max-width: 992px) {
+  .header {
+    padding: 20px 58px 20px 58px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .header {
+    padding: 15px 40px 15px 40px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .header {
+    padding: 10px 20px 10px 20px;
+  }
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu_items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.logo_size {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.logo_color_first {
+  color: rgb(248, 155, 41);
+}
+
+.logo_color_second {
+  color: rgb(255, 15, 123);
+}
+
+.btn {
+  padding: 10px 30px 10px 30px;
+  color: #FFFFFF;
+  background: linear-gradient(90deg, rgb(248, 155, 41) 0%, rgb(255, 15, 123) 100%);
+  font-size: 18px;
+  font-weight: normal;
+  border-radius: 8px;
+  box-shadow: 1px 1px 28px 4px rgb(252, 27, 114);
+}/*# sourceMappingURL=style.css.map */

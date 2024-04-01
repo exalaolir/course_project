@@ -1,0 +1,16 @@
+html{
+    font-family: "Sen", sans-serif;
+    font-optical-sizing: auto;
+}
+body{
+    background-color: $backgroundColor;
+    margin: 0;
+    color: $fontColorMain;
+}
+p{
+    margin: 0;
+}
+a, a:link, a:visited, a:hover{
+    color:$fontColorMain;
+    text-decoration: none;
+}

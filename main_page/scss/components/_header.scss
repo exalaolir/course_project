@@ -1,0 +1,34 @@
+.header{
+    @include container(base-container);
+}
+.navbar{
+    @include container(fluid-container);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu_items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 3rem;
+    @include font_property($h_3_size, $regulr_font);
+}
+.logo_size{
+    @include font_property($h_2_size, $bold_font)
+}
+.logo_color_first{
+    color:$orange
+}
+.logo_color_second{
+    color:$pink
+}
+.btn{
+    padding: 10px 30px 10px 30px;
+    color:$fontColorMain;
+    background: $gradient;
+    @include font_property($body_1_size, $regulr_font);
+    border-radius: 8px;
+    box-shadow: $shadow;
+}

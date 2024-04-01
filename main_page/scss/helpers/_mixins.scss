@@ -1,0 +1,33 @@
+@mixin media($minmax, $media) {
+  @each $size, $resolution in $sizes {
+    @if $media == $size {
+      @media only screen and (#{$minmax}-width: $resolution) {
+        @content;
+      }
+    }
+  }
+}
+@mixin font_property($size, $weight){
+  font-size: $size;
+  font-weight: $weight;
+}
+@mixin container($container){
+  @if $container == "base-container"{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    padding: 20px 72px 20px 72px;
+    @include media(max, lg){
+      padding: 20px 58px 20px 58px;
+    }
+    @include media(max, md){
+      padding: 15px 40px 15px 40px;
+    }
+    @include media(max, sm){
+      padding: 10px 20px 10px 20px;
+    }
+  }
+  @if $container == "fluid-container"{
+    width: 100%;
+  }
+}
