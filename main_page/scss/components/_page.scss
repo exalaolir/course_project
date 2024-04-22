@@ -1,9 +1,15 @@
 html{
     font-family: "Sen", sans-serif;
     font-optical-sizing: auto;
+    @include media(max, xxl){
+        font-size: calcFluidFontSize(8, 16, 320, 1440, px);
+    }
+    @include media(min, xxl){
+        font-size: 16px;
+    }
+    background-color: $backgroundColor;
 }
 body{
-    background-color: $backgroundColor;
     margin: 0;
     color: $fontColorMain;
 }
@@ -13,4 +19,22 @@ p{
 a, a:link, a:visited, a:hover{
     color:$fontColorMain;
     text-decoration: none;
+    text-align: center;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding:0;
+}
+.base{
+    @include container(base-container);
+}
+.fluid{
+    @include container(fluid-container);
+}
+.line{
+    border-color: $pink;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
 }

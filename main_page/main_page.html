@@ -10,20 +10,127 @@
     <title>Kinomax</title>
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar">
+    <header class="base">
+        <nav class="navbar fluid">
             <div>
                 <span class="logo_size">
                     <span class="logo_color_first">K</span>ino<span class="logo_color_second">M</span>ax
                 </span>
             </div>
-            <div class="menu_items">
+            <div class="menu_items menu_hide">
                 <a href="#">Главная</a>
                 <a href="#">Наши кинокомнаты</a>
                 <a href="#">Афиша</a>
             </div>
-            <a class="btn" href="#">Связаться с нами</a>
+            <a class="btn menu_hide" href="http://127.0.0.1:5500/main_page/form.html">Связаться с нами</a>
+            <div class="hamb">
+                <div class="hamb__field" id="hamb">
+                  <span class="bar"></span> 
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </div>
+            </div>
         </nav>
+        <div class="popup" id="popup">
+            <ul class="menu" id="menu">
+                <li class="pop_item">
+                    <a href="#">Главная</a>
+                </li>
+                <li class="pop_item">
+                    <a href="#">Наши кинокомнаты</a>
+                </li>
+                <li class="pop_item">
+                    <a href="#">Афиша</a>
+                </li>
+                <li class="pop_item">
+                    <a href="http://127.0.0.1:5500/main_page/form.html">Связаться с нами</a>
+                </li>
+            </ul>
+        </div>
     </header>
+    <article class="article">
+        <h1 class="main-logo">
+           <span>
+                <span class="logo_color_first">K</span>ino<span class="logo_color_second">M</span>ax
+           </span>
+        </h1>
+        <p class="main-text">
+            Сеть современных мини-кинотеатров с новейшими технологиями,<br>
+            созданными для вашего удобства
+        </p>
+    </article>
+    <article class="base about_us_section">
+        <section class="about_item">
+            <div class="text_box">
+                <h3 class="about_header">Идеальный звук</h3>
+                <p class="about_text">
+                    В наших кинотеатрах вы можете насладиться самым современным стерео-звуком с поддержкой
+                    Dolby Atmos и THX
+                </p>
+            </div>
+            <div class="image_wave"></div>
+        </section>
+        <section class="about_item" style="grid-template-columns: 2fr 2fr">
+            <div class="image_deco" style="background-size: cover"></div>
+            <div class="text_box">
+                <h3 class="about_header">Качественное изображение</h3>
+                <p class="about_text">
+                    Насладитесь потрясающим качеством 4K изображения, обеспечиваемого двумя новейшими лазерными 
+                    проектороми IMAX, с расширенным цветовым охватом в 100 миллиардов цветов, обеспечиваемым технологией 
+                    Dolby Vision. А поддержка IMAX 3D и Real 3D позволяют полностью погрузиться в происходяцее на экране.
+                </p>
+            </div>
+        </section>
+        <section class="about_item" style="grid-template-columns: 2fr 3fr">
+            <div class="text_box">
+                <h3 class="about_header">Абсолютный комфорт</h3>
+                <p class="about_text">
+                    Насладитесь просмотром фильма в наших удобных креслах премиум качества, оснащённых функцией вибромассажа.
+                </p>
+                <a class="btn article_btn" href="#">Забронировать кинокомнату</a>
+            </div>
+            <div class="image_deco_2" ></div>
+        </section>
+    </article>
+    <div class="base">
+        <hr class="line">
+    </div>
+    <footer class="base">
+        <div class="col col1">
+            <h2>Разделы</h2>
+            <ul>
+                <li>
+                    <a href="#">Афиша</a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <a href="#">Связаться с нами</a>
+                </li>
+                <li>
+                    <a href="#">
+                        Наши кинотеатры
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col col2">
+            <h2>Служба поддержки</h2>
+            <p>Мы всегда готовы вам помочь.
+                Наши операторы онлайн 24/7</p>
+            <a class="btn" href="#">Написать нам</a>
+        </div>
+        <div class="col col3">
+            <h1>
+                <span>
+                    <span class="logo_color_first">K</span>ino<span class="logo_color_second">M</span>ax
+               </span>
+            </h1>
+            <p>© 2024 ООО «KinoMax»
+                HBO ® and related service marks are 
+                the property of Home Box Office, Inc</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

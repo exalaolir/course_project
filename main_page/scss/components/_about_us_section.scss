@@ -1,0 +1,109 @@
+%image-extention{
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include media(max, xxl){
+        background-size: contain;
+        height: calcFluidFontSize(5, 15, 30, 80, rem);
+        width: auto;
+        order: -1;
+        background-position-x: center;
+    }
+}
+.about_us_section{
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    @include media(min, md){
+        row-gap: 10rem;
+    }
+    @include media(max, md){
+        row-gap: 5rem;
+    }
+}
+.about_item{
+    @include media(min, xxl){
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        column-gap: 2rem;
+    }
+    @include media(max, xxl){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+        @include card();
+    }
+}
+.text_box{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    margin-top: 2rem;
+    line-height: 2.2rem;
+    justify-content: center;
+    @include media(max, xxl){
+        h3{
+            text-align: center;
+        }
+    }
+}
+.obout_us_header{
+    @include font_property($h_2_size, $bold_font);
+    text-align: center;
+}
+.about_header{
+    @include font_property($h_2_size, $bold_font);
+    color: transparent;
+    background-clip: text;
+    background-image: $gradient;
+}
+.about_text{
+    @include font_property($body_1_size, $regulr_font);
+}
+.image_wave{
+    background-image: url("/main_page/res/Frame1.png");
+    @extend %image-extention;
+    @include media(min, xxl){
+        height: auto;
+        background-position-x: right;
+    }
+}
+.image_deco{
+    background-image: url("/main_page/res/img_dec_1.png");
+    @extend %image-extention;
+    @include media(max, xxl){
+        height: 30rem;
+        @include media(max, lg){
+            height: 20rem;
+        }
+        border-radius: 15px 15px 0 0;
+    }
+    @include media(min, xxl){
+        height: 30rem;
+    }
+}
+
+.image_deco_2{
+    background-image: url("/main_page/res/deco_2.png");
+    @extend %image-extention;
+    @include media(max, xxl){
+        height: 30rem;
+        @include media(max, lg){
+            height: 20rem;
+        }
+        border-radius: 15px 15px 0 0;
+        background-size: cover
+    }
+    @include media(min, xxl){
+        height: 30rem;
+        background-position: right;
+    }
+}
+.article_btn{
+    width: fit-content;
+    align-items: center;
+    @include media(max, xxl){
+        margin: auto;
+    }
+}

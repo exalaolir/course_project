@@ -1,0 +1,23 @@
+.article{
+    @include container(fluid-container);
+    background-image: url("/main_page/res/Frame.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20rem;
+    padding-bottom: 25rem; 
+}
+.main-logo{
+    @include font_property($h_1_size, $bold_font);
+    margin: auto;
+    margin-bottom: 1.5rem;
+}
+.main-text{
+    @include font_property($h_2_size, $regulr_font);
+    margin: auto;
+    text-align: center;
+    line-height: 3.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}

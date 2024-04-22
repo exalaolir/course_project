@@ -11,6 +11,11 @@
   font-size: $size;
   font-weight: $weight;
 }
+@mixin card(){
+  background-color: $cardBackgroundColor;
+  padding: 2rem;
+  border-radius: 15px;
+}
 @mixin container($container){
   @if $container == "base-container"{
     margin-left: auto;
@@ -30,4 +35,13 @@
   @if $container == "fluid-container"{
     width: 100%;
   }
+}
+
+@function calcFluidFontSize($f-min, $f-max, $v-min, $v-max, $units: px) {
+  $k: ($f-max - $f-min)/($v-max - $v-min);
+  $b: $f-min - $k * $v-min;
+
+  $b: $b + $units;
+
+  @return calc( #{$k} * 100vw + #{$b} );
 }

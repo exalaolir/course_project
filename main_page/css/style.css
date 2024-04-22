@@ -1,10 +1,20 @@
 html {
   font-family: "Sen", sans-serif;
   font-optical-sizing: auto;
+  background-color: #0A0511;
+}
+@media only screen and (max-width: 1520px) {
+  html {
+    font-size: calc(0.0071428571 * 100vw + 5.7142857143px);
+  }
+}
+@media only screen and (min-width: 1520px) {
+  html {
+    font-size: 16px;
+  }
 }
 
 body {
-  background-color: #0A0511;
   margin: 0;
   color: #FFFFFF;
 }
@@ -16,32 +26,50 @@ p {
 a, a:link, a:visited, a:hover {
   color: #FFFFFF;
   text-decoration: none;
+  text-align: center;
 }
 
-.header {
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.base {
   margin-left: auto;
   margin-right: auto;
   max-width: 1440px;
   padding: 20px 72px 20px 72px;
 }
 @media only screen and (max-width: 992px) {
-  .header {
+  .base {
     padding: 20px 58px 20px 58px;
   }
 }
 @media only screen and (max-width: 768px) {
-  .header {
+  .base {
     padding: 15px 40px 15px 40px;
   }
 }
 @media only screen and (max-width: 576px) {
-  .header {
+  .base {
     padding: 10px 20px 10px 20px;
   }
 }
 
-.navbar {
+.fluid {
   width: 100%;
+}
+
+.line {
+  border-color: rgb(255, 15, 123);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -52,14 +80,26 @@ a, a:link, a:visited, a:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  -moz-column-gap: 3rem;
-       column-gap: 3rem;
-  font-size: 24px;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  font-size: 1.5rem;
   font-weight: normal;
+}
+@media only screen and (max-width: 992px) {
+  .menu_items {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .menu_hide {
+    display: none;
+  }
 }
 
 .logo_size {
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
@@ -74,9 +114,345 @@ a, a:link, a:visited, a:hover {
 .btn {
   padding: 10px 30px 10px 30px;
   color: #FFFFFF;
-  background: linear-gradient(90deg, rgb(248, 155, 41) 0%, rgb(255, 15, 123) 100%);
-  font-size: 18px;
+  background: linear-gradient(90deg, rgb(255, 15, 123) 0%, rgb(248, 155, 41) 100%);
+  font-size: 1.4rem;
   font-weight: normal;
   border-radius: 8px;
+  box-shadow: 1px 1px 10px 1px rgb(252, 27, 114);
+  transition: all 0.2s;
+}
+
+.btn:hover {
   box-shadow: 1px 1px 28px 4px rgb(252, 27, 114);
+}
+
+.hamb {
+  display: flex;
+  align-items: center;
+}
+@media only screen and (min-width: 992px) {
+  .hamb {
+    display: none;
+  }
+}
+
+.hamb__field {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 6px auto;
+  background-color: #fff;
+  transition: 0.2s;
+}
+
+.popup {
+  position: fixed;
+  top: 75px;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #0A0511;
+  z-index: 100;
+  display: flex;
+  transition: 0.3s;
+}
+@media only screen and (max-width: 992px) {
+  .popup {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.popup.open {
+  left: 0;
+}
+
+.popup .menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 50px 0;
+  overflow: auto;
+}
+
+.hamb__field.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamb__field.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamb__field.active .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+body.noscroll {
+  overflow: hidden;
+}
+
+.menu {
+  list-style-type: none;
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding-left: 0;
+}
+
+.pop_item {
+  margin-bottom: 4rem;
+  font-size: 24px;
+}
+
+.article {
+  width: 100%;
+  background-image: url("/main_page/res/Frame.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 20rem;
+  padding-bottom: 25rem;
+}
+
+.main-logo {
+  font-size: 4.7rem;
+  font-weight: bold;
+  margin: auto;
+  margin-bottom: 1.5rem;
+}
+
+.main-text {
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin: auto;
+  text-align: center;
+  line-height: 3.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.image_deco_2, .image_deco, .image_wave {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media only screen and (max-width: 1520px) {
+  .image_deco_2, .image_deco, .image_wave {
+    background-size: contain;
+    height: calc(0.2 * 100vw + -1rem);
+    width: auto;
+    order: -1;
+    background-position-x: center;
+  }
+}
+
+.about_us_section {
+  margin-top: 7rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .about_us_section {
+    row-gap: 10rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .about_us_section {
+    row-gap: 5rem;
+  }
+}
+
+@media only screen and (min-width: 1520px) {
+  .about_item {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+}
+@media only screen and (max-width: 1520px) {
+  .about_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    background-color: #1A1226;
+    padding: 2rem;
+    border-radius: 15px;
+  }
+}
+
+.text_box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  margin-top: 2rem;
+  line-height: 2.2rem;
+  justify-content: center;
+}
+@media only screen and (max-width: 1520px) {
+  .text_box h3 {
+    text-align: center;
+  }
+}
+
+.obout_us_header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.about_header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: linear-gradient(90deg, rgb(255, 15, 123) 0%, rgb(248, 155, 41) 100%);
+}
+
+.about_text {
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+.image_wave {
+  background-image: url("/main_page/res/Frame1.png");
+}
+@media only screen and (min-width: 1520px) {
+  .image_wave {
+    height: auto;
+    background-position-x: right;
+  }
+}
+
+.image_deco {
+  background-image: url("/main_page/res/img_dec_1.png");
+}
+@media only screen and (max-width: 1520px) {
+  .image_deco {
+    height: 30rem;
+    border-radius: 15px 15px 0 0;
+  }
+}
+@media only screen and (max-width: 1520px) and (max-width: 992px) {
+  .image_deco {
+    height: 20rem;
+  }
+}
+@media only screen and (min-width: 1520px) {
+  .image_deco {
+    height: 30rem;
+  }
+}
+
+.image_deco_2 {
+  background-image: url("/main_page/res/deco_2.png");
+}
+@media only screen and (max-width: 1520px) {
+  .image_deco_2 {
+    height: 30rem;
+    border-radius: 15px 15px 0 0;
+    background-size: cover;
+  }
+}
+@media only screen and (max-width: 1520px) and (max-width: 992px) {
+  .image_deco_2 {
+    height: 20rem;
+  }
+}
+@media only screen and (min-width: 1520px) {
+  .image_deco_2 {
+    height: 30rem;
+    background-position: right;
+  }
+}
+
+.article_btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+}
+@media only screen and (max-width: 1520px) {
+  .article_btn {
+    margin: auto;
+  }
+}
+
+footer {
+  display: grid;
+}
+@media only screen and (min-width: 992px) {
+  footer {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "col1 col2 col3";
+    -moz-column-gap: 8rem;
+         column-gap: 8rem;
+  }
+  footer .col {
+    row-gap: 1.7rem;
+  }
+}
+@media only screen and (max-width: 992px) {
+  footer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    grid-template-areas: "col1 col2" "col3 col3";
+    -moz-column-gap: 5rem;
+         column-gap: 5rem;
+  }
+}
+@media only screen and (max-width: 430px) {
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 3fr 1fr;
+    grid-template-areas: "col1" "col2" "col3";
+  }
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+.col h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.col1 {
+  grid-area: col1;
+}
+.col1 ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.col2 {
+  grid-area: col2;
+}
+
+.col3 {
+  grid-area: col3;
+}
+@media only screen and (max-width: 992px) {
+  .col3 {
+    flex-direction: row;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    align-items: center;
+  }
+}
+.col3 h1 {
+  font-size: 4.7rem;
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */

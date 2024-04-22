@@ -2,21 +2,22 @@
 $backgroundColor: #0A0511;
 $fontColorMain: #FFFFFF;
 $cardBackgroundColor: #1A1226;
-$gradient: linear-gradient(90deg, rgba(248,155,41,1) 0%, rgba(255,15,123,1) 100%);
+$gradient: linear-gradient(90deg, rgba(255,15,123,1) 0%, rgba(248,155,41,1)  100%);
 $orange: rgba(248,155,41,1);
 $pink: rgba(255,15,123,1);
 $shadow: 1px 1px 28px 4px rgba(252,  27,  114, 1);
+$minShadow: 1px 1px 10px 1px rgba(252,  27,  114, 1);
 
 //font size
-$h_1_size: 78px;
-$h_2_size: 40px;
-$h_3_size: 24px;
-$body_1_size: 18px;
-$body_2_size: 16px;
+$h_1_size: 4.7rem;
+$h_2_size: 2.5rem;
+$h_3_size: 1.5rem;
+$body_1_size: 1.4rem;
+$body_2_size: 1rem;
 
 //font weight
 $regulr_font: normal;
 $bold_font: bold;
 
 //screen
-$sizes: ("xs":320px, "sm":576px, "md":768px, "lg":992px, "xl":1200px, "xxl":1440px);
+$sizes: ("xs":320px, "s":430px, "sm":576px, "md":768px, "lg":992px, "xl":1365px, "xxl":1520px);
