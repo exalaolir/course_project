@@ -1,0 +1,46 @@
+.form-container{
+    background-image: url("/main_page/res/Frame.png");
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    background-color: $backgroundColor;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: $shadow;
+    width: calcFluidFontSize(28, 34, 20, 80, rem);
+    .form-element{
+        border-radius: 0.5rem;
+        height: 2rem;
+        border: none;
+        background-color: $inputBackgroundColor;
+        color: $fontColorMain;
+        padding: 0.4rem;
+    }
+    .select{
+        display: inline-block;
+        width: auto;
+        height: 2.3rem;
+        min-height: 24px;
+        background-position-x: 9%;
+    }
+    .form-element:focus-visible{
+        outline: solid 2px $pink;
+    }
+    .btn{
+        border: none;
+    }
+    .option{
+        height: 2.3rem;
+        background-color: $inputBackgroundColor;
+    }
+    h3{
+        text-align: center;
+    }
+}

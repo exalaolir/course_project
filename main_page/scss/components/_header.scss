@@ -10,8 +10,8 @@
     justify-content: space-between;
     column-gap: 2rem;
     @include media(max, lg){
-        flex-direction: column;
-        justify-content: center;
+      flex-direction: column;
+      justify-content: center;
     }
     @include font_property($h_3_size, $regulr_font);
 }
@@ -36,7 +36,9 @@
     @include font_property($body_1_size, $regulr_font);
     border-radius: 8px;
     box-shadow: $minShadow;
-    transition: all 0.2s;
+    transition: box-shadow 0.2s;
+    font-size: 1rem;
+    border: none;
 }
 
 .btn:hover{

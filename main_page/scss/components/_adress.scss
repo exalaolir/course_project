@@ -1,0 +1,45 @@
+.adress-container{
+    list-style-type: none;
+    .adress-card{
+        margin-top: 2rem;
+        box-sizing: content-box;
+        width: auto;
+        @include card();
+        display: flex;
+        justify-content: left;
+        column-gap: 2rem;
+        @include media(max, lg){
+            flex-direction: column;
+        }
+    }
+    img{
+        height: auto;
+        width: auto;
+
+    }
+    .adress-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include media(max, lg){
+            margin-top: 2rem;
+        }
+        ul{
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            li{
+                margin-top: 1rem;
+            }
+            #qantity::before{
+                content: "Количество мест:  ";
+                color: $pink;
+                font-weight: bold;
+            }
+            #adressOfLocation::before{
+                content: "Адрес:  ";
+                color: $pink;
+                font-weight: bold;
+            }
+        }
+    }
+}

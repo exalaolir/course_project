@@ -1,0 +1,168 @@
+.grid_card{
+    @include card();
+    padding: 1rem;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    img{
+        max-width: 15rem;
+        height: auto;
+    }
+    img, h3{
+        margin-bottom: 0.7rem;
+    }
+    h3{
+        word-break: break-all;
+    }
+}
+.catalog_btn{
+    background-color: transparent;
+    color: $fontColorMain;
+    border: solid 1px $pink;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    padding: 0.4rem 1rem 0.4rem 1rem;
+}
+.catalog_grid{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 18.5rem);
+    justify-content: space-evenly;
+}
+.sort_container{
+    display: flex;
+    justify-content: center;
+    .catalog_btn{
+        margin: 1rem;
+        margin-right: 2rem;
+    }
+    margin-bottom: 2rem;
+    .dropdown{
+        display: none;
+    }
+    @include media(max, md){
+        display: block;
+        .hide{
+            display: none;
+        }
+        .dropdown{
+            display: inline-block;
+        }
+    }
+}
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    display: flex;
+    padding: 3rem;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}
+.info-card{
+    margin: auto;
+    position: relative;
+    max-width: 60rem;
+    max-height: 30rem;
+    cursor: default;
+}
+.close{
+    border: none;
+    cursor: pointer;
+    font-size: $body_1_size;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: transparent;
+    svg{
+        fill: $fontColorMain;
+        transition: fill 200ms ease-in;
+    }
+}
+.close:hover{
+    svg{
+        fill: $pink;
+    }
+}
+.model_open{
+    visibility: visible;
+    opacity: 1;
+}
+
+.dropdown {
+    position: relative;
+    margin-bottom: 0.7rem;
+}
+
+.dropbtn{
+    width: 12rem;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    svg{
+        fill: $fontColorMain;
+        transition: transform 200ms ease-out;
+    }
+}
+.dropdown-content {
+    visibility: hidden;
+    position: absolute;
+    width: 12rem;
+    z-index: 1;
+    background-color: $cardBackgroundColor;
+    border-radius: 0.5rem;
+    transition: visibility 120ms ease-in;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    .dropdown_btn{
+        background-color: $cardBackgroundColor;
+        border: none;
+        color: $fontColorMain;
+        margin-top: 0.35rem;
+        margin-bottom: 0.35rem;
+        transition: color 90ms ease-in;
+        font-size: 1.2REM;
+    }
+}
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+}
+.dropdown:hover{
+    svg{
+        transform: rotateZ(90deg);   
+        fill:  $pink
+    }
+}
+.dropdown_btn:hover{
+    color: $pink;
+}
+.search_container{
+    .search{
+        width: 70%;
+        padding: 0.5rem;
+        padding-left: 1rem;
+        border-radius: 0.5rem;
+        background-color: $inputBackgroundColor;
+        border: solid 1px $pink;
+        color: $fontColorMain;
+    }
+    .search:focus-visible{
+        outline: solid 2px $pink;
+    }
+    text-align: center;
+    @include media(max, md){
+        text-align: left;
+        padding-left: 1rem;
+    }
+}

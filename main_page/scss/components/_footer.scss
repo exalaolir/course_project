@@ -1,4 +1,6 @@
 footer{
+    border-top: solid 2px $pink;
+    box-sizing: border-box;
     display: grid;
     @include media(min, lg){
         grid-template-columns: 1fr 1fr 1fr;

@@ -12,6 +12,10 @@ html{
 body{
     margin: 0;
     color: $fontColorMain;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 p{
     margin: 0;
@@ -30,6 +34,9 @@ h1,h2,h3,h4,h5,h6{
 }
 .fluid{
     @include container(fluid-container);
+}
+.block{
+    display: block;
 }
 .line{
     border-color: $pink;

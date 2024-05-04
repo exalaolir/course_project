@@ -1,0 +1,41 @@
+.navbar_items{
+    margin-left: 2rem;
+}
+.about_items_style{
+    display: flex;
+    flex-direction: column;
+    @include card();
+    margin-bottom: 2rem;
+    .about_header{
+        @include font_property($h_2_size, $bold_font);
+        color:  $pink;
+        background-clip: text;
+        background-image: none;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .image_wave{
+        height: calcFluidFontSize(5, 17, 30, 80, rem);;
+    }
+    .image_deco_2, .image_wave{
+        order: -1;
+    }
+    .image_deco_2{
+        height: 30rem;
+        border-radius: 15px 15px 0 0;
+        background-size: cover;
+
+    }
+    .btn{
+        margin-top: 1rem;
+    }
+}
+.foot_style{
+    display: none;
+}
+.adress_Text{
+    margin-left: 1rem;
+}
+.grid_card_ie{
+    margin-left: auto;
+}

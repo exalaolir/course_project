@@ -1,0 +1,56 @@
+.info_container{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    justify-content: space-between
+}
+.info-card{
+    @include card();
+    display: flex;
+    column-gap: 2rem;
+    img{
+        max-height: 26rem;
+        max-width: 17rem;
+    }
+    @include media(max, s){
+        img{
+            display: none;
+        }
+        flex-direction: column;
+    }
+    .ifo-film-text{
+        h1{
+            color: $pink;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        li{
+            margin-top: 1rem;
+        }
+        #name::before{
+            content: "Название:  ";
+            color: $pink;
+        }
+        #date::before{
+            content: "Дата:  ";
+            color: $pink;
+        }
+        #time::before{
+            content: "Продолжительность:  ";
+            color: $pink;
+        }
+        #country::before{
+            content: "Страна производства:  ";
+            color: $pink;
+        }
+        #director::before{
+            content: "Режисёр:  ";
+            color: $pink;
+        }
+        #description::before{
+            content: "Описание:  ";
+            color: $pink;
+        }
+    }
+}

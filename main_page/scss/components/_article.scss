@@ -12,6 +12,7 @@
     @include font_property($h_1_size, $bold_font);
     margin: auto;
     margin-bottom: 1.5rem;
+    text-align: center
 }
 .main-text{
     @include font_property($h_2_size, $regulr_font);
