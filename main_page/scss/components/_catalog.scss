@@ -11,6 +11,8 @@
     img{
         max-width: 15rem;
         height: auto;
+        max-height: 20rem;
+        border-radius: 0.5rem;
     }
     img, h3{
         margin-bottom: 0.7rem;
@@ -18,6 +20,10 @@
     h3{
         word-break: break-all;
     }
+    transition: transform 200ms ease-in-out;
+}
+.grid_card:hover{
+    transform: scale(1.1);
 }
 .catalog_btn{
     background-color: transparent;
@@ -26,6 +32,11 @@
     font-size: 1.1rem;
     border-radius: 0.5rem;
     padding: 0.4rem 1rem 0.4rem 1rem;
+    transition: 100ms ease-in-out;
+    min-width: 10rem;
+}
+.catalog_btn:hover{
+    color: $pink;
 }
 .catalog_grid{
     text-align: center;
@@ -165,4 +176,17 @@
         text-align: left;
         padding-left: 1rem;
     }
+}
+.nonActiveBtn{
+    border: solid 1px $pinkDis;
+    color:rgb(255, 255, 255, 0.5);
+}
+.nonActiveBtn:hover{
+    color: rgb(255, 255, 255, 0.5);;
+}
+.remActiveBtn{
+    border: solid 1px rgba(58, 224, 56);
+}
+.remActiveBtn:hover{
+    color: rgba(58, 224, 56);
 }

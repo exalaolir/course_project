@@ -30,16 +30,15 @@
             li{
                 margin-top: 1rem;
             }
-            #qantity::before{
-                content: "Количество мест:  ";
-                color: $pink;
-                font-weight: bold;
-            }
-            #adressOfLocation::before{
-                content: "Адрес:  ";
-                color: $pink;
-                font-weight: bold;
-            }
         }
     }
+}
+
+#qantity::before{
+    content: "Количество мест:  ";
+    color: $pink;
+}
+#adressOfLocation::before{
+    content: "Адрес:  ";
+    color: $pink;
 }

@@ -32,6 +32,11 @@ a, a:link, a:visited, a:hover {
   color: #FFFFFF;
   text-decoration: none;
   text-align: center;
+  transition: color 200ms ease-in-out;
+}
+
+a:hover {
+  color: rgb(255, 15, 123);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -135,6 +140,7 @@ ul {
 
 .btn:hover {
   box-shadow: 1px 1px 28px 4px rgb(252, 27, 114);
+  color: #FFFFFF;
 }
 
 .hamb {
@@ -448,7 +454,7 @@ footer {
 .col1 ul {
   display: flex;
   flex-direction: column;
-  row-gap: 1.5rem;
+  row-gap: 1rem;
 }
 
 .col2 {
@@ -480,6 +486,14 @@ footer {
   align-items: center;
 }
 
+.film {
+  order: 0;
+}
+
+.room {
+  order: 1;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -488,7 +502,23 @@ footer {
   padding: 3rem;
   border-radius: 1rem;
   box-shadow: 1px 1px 28px 4px rgb(252, 27, 114);
-  width: calc(0.1 * 100vw + 26rem);
+  width: calc(0.3 * 100vw + 19rem);
+}
+.form .container_for_sale {
+  display: flex;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+@media only screen and (max-width: 992px) {
+  .form .container_for_sale {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+}
+.form .container_for_sale .info-card {
+  margin: 0;
+  align-items: start;
+  flex-grow: 1;
 }
 .form .form-element {
   border-radius: 0.5rem;
@@ -560,15 +590,15 @@ footer {
 .adress-container .adress-info ul li {
   margin-top: 1rem;
 }
-.adress-container .adress-info ul #qantity::before {
+
+#qantity::before {
   content: "Количество мест:  ";
   color: rgb(255, 15, 123);
-  font-weight: bold;
 }
-.adress-container .adress-info ul #adressOfLocation::before {
+
+#adressOfLocation::before {
   content: "Адрес:  ";
   color: rgb(255, 15, 123);
-  font-weight: bold;
 }
 
 .info_container {
@@ -646,16 +676,23 @@ footer {
   margin-bottom: 2rem;
   margin-left: 0.8rem;
   margin-right: 0.8rem;
+  transition: transform 200ms ease-in-out;
 }
 .grid_card img {
   max-width: 15rem;
   height: auto;
+  max-height: 20rem;
+  border-radius: 0.5rem;
 }
 .grid_card img, .grid_card h3 {
   margin-bottom: 0.7rem;
 }
 .grid_card h3 {
   word-break: break-all;
+}
+
+.grid_card:hover {
+  transform: scale(1.1);
 }
 
 .catalog_btn {
@@ -665,6 +702,12 @@ footer {
   font-size: 1.1rem;
   border-radius: 0.5rem;
   padding: 0.4rem 1rem 0.4rem 1rem;
+  transition: 100ms ease-in-out;
+  min-width: 10rem;
+}
+
+.catalog_btn:hover {
+  color: rgb(255, 15, 123);
 }
 
 .catalog_grid {
@@ -816,6 +859,23 @@ footer {
     text-align: left;
     padding-left: 1rem;
   }
+}
+
+.nonActiveBtn {
+  border: solid 1px rgba(255, 15, 123, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.nonActiveBtn:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.remActiveBtn {
+  border: solid 1px rgb(58, 224, 56);
+}
+
+.remActiveBtn:hover {
+  color: rgb(58, 224, 56);
 }
 
 .navbar_items {

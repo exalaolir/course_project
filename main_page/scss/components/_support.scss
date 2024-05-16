@@ -6,6 +6,12 @@
     justify-content: center;
     align-items: center;
 }
+.film{
+    order: 0;
+}
+.room{
+    order: 1;
+}
 .form{
     display: flex;
     flex-direction: column;
@@ -14,7 +20,20 @@
     padding: 3rem;
     border-radius: 1rem;
     box-shadow: $shadow;
-    width: calcFluidFontSize(28, 34, 20, 80, rem);
+    width: calcFluidFontSize(25, 43, 20, 80, rem);
+    .container_for_sale{
+        display: flex;
+        column-gap: 2rem;
+        @include media(max, lg){
+            flex-direction: column;
+            row-gap: 2rem;
+        }
+        .info-card{
+            margin: 0;
+            align-items: start;
+            flex-grow: 1;
+        }
+    }
     .form-element{
         border-radius: 0.5rem;
         height: 2rem;

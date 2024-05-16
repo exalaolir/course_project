@@ -24,6 +24,10 @@ a, a:link, a:visited, a:hover{
     color:$fontColorMain;
     text-decoration: none;
     text-align: center;
+    transition: color 200ms ease-in-out;
+}
+a:hover{
+    color: $pink;
 }
 h1,h2,h3,h4,h5,h6{
     margin: 0;

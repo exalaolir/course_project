@@ -3,7 +3,7 @@ function isInternetExplorer() {
       window.navigator.userAgent.indexOf("MSIE ") > -1 ||
       window.navigator.userAgent.indexOf("Trident/") > -1
     );
-  }
+}
   function addStyle(array, style) {
     for (var index = 0; index < array.length; index++) {
       array[index].classList.add(style);

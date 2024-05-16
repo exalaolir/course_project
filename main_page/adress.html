@@ -22,7 +22,7 @@
                     <a href="main_page.html" class="nav_link">Главная</a>
                     <a href="catalog.html" class="nav_link">Афиша</a>
                 </div>
-                <a class="btn menu_hide" href="form.html">Связаться с нами</a>
+                <a class="btn menu_hide" href="form.html">Оформить заказ</a>
                 <div class="hamb">
                     <div class="hamb__field" id="hamb">
                       <span class="bar"></span> 
@@ -34,13 +34,13 @@
             <div class="popup" id="popup">
                 <ul class="menu" id="menu">
                     <li class="pop_item">
-                        <a href="#">Главная</a>
+                        <a href="main_page.html">Главная</a>
                     </li>
                     <li class="pop_item">
-                        <a href="#">Афиша</a>
+                        <a href="catalog.html">Афиша</a>
                     </li>
                     <li class="pop_item">
-                        <a href="form.html">Связаться с нами</a>
+                        <a href="form.html">Оформить заказ</a>
                     </li>
                 </ul>
             </div>
@@ -48,46 +48,8 @@
     </header>
     <article>
         <div class="base">
-            <ul class="adress-container">
-                <li class="adress-card">
-                    <img src="res/location.png" alt="img">
-                    <div class="adress-info">
-                        <div>
-                            <h2>6h76h6h76h7</h2>
-                            <ul>
-                                <li id="qantity">h67h</li>
-                                <li id="adressOfLocation">67h76h</li>
-                            </ul>
-                        </div>
-                       <input type="button" value="eferferf" class="btn">
-                    </div>
-                </li>
-                <li class="adress-card">
-                    <img src="res/location.png" alt="img">
-                    <div class="adress-info">
-                        <div>
-                            <h2>6h76h6h76h7</h2>
-                            <ul>
-                                <li id="qantity">h67h</li>
-                                <li id="adressOfLocation">67h76h</li>
-                            </ul>
-                        </div>
-                       <input type="button" value="eferferf" class="btn">
-                    </div>
-                </li>
-                <li class="adress-card">
-                    <img src="res/location.png" alt="img">
-                    <div class="adress-info">
-                        <div>
-                            <h2>6h76h6h76h7</h2>
-                            <ul>
-                                <li id="qantity">h67h</li>
-                                <li id="adressOfLocation">67h76h</li>
-                            </ul>
-                        </div>
-                       <input type="button" value="eferferf" class="btn">
-                    </div>
-                </li>
+            <ul class="adress-container" id="adress_container">
+                
             </ul>
         </div>
     </article>
@@ -96,25 +58,22 @@
             <h2>Разделы</h2>
             <ul>
                 <li>
-                    <a href="#">Афиша</a>
-                    <a href="#"></a>
-                    <a href="#"></a>
+                    <a href="catalog.html">Афиша</a>
                 </li>
                 <li>
-                    <a href="#">Связаться с нами</a>
+                    <a href="form.html">Корзина</a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="adress.html">
                         Наши кинотеатры
                     </a>
                 </li>
             </ul>
         </div>
         <div class="col col2">
-            <h2>Служба поддержки</h2>
-            <p>Мы всегда готовы вам помочь.
-                Наши операторы онлайн 24/7</p>
-            <a class="btn" href="#">Написать нам</a>
+            <h2>Кинокомнаты</h2>
+            <p>Обширный выбор кинокомнат на любой вкус</p>
+            <a class="btn" href="#">Кинокомнаты</a>
         </div>
         <div class="col col3">
             <h1>
@@ -124,10 +83,14 @@
             </h1>
             <p>© 2024 ООО «KinoMax»
                 HBO ® and related service marks are 
-                the property of Home Box Office, Inc</p>
+                the property of Home Box Office, Inc
+            </p>
         </div>
     </footer>
-    <script type="text/javascript" src="js/ie_style.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8.3.0/dist/polyfill.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.6.20/dist/fetch.umd.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js"></script>
+    <script type="text/javascript" src="js/adress_logic.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

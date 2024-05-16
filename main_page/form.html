@@ -40,7 +40,7 @@
                         <a href="adress.html">Наши кинокомнаты</a>
                     </li>
                     <li class="pop_item">
-                        <a href="#">Афиша</a>
+                        <a href="catalog.html">Афиша</a>
                     </li>
                 </ul>
             </div>
@@ -49,24 +49,23 @@
     <article class="form-container">
         <form class="form" action="" id="supportForm">
             <h3 class="about_header">Бронирование сеанса</h3>
-            <input type="text" name="" id="" class="form-element" placeholder="Введите ФИО">
-            <input type="email" name="" id="" class="form-element" placeholder="email">
-            <select name="" id="" class="form-element select">
-                <option value="" class="option">выберете фильм</option>
-                <option value="" class="option">выберете фильм</option>
-                <option value="" class="option">выберете фильм</option>
-                <option value="" class="option">выберете фильм</option>
-            </select>
-            <select name="" id="" class="form-element select">
-                <option value="" class="option">выберете кинокомнату</option>
-                <option value="" class="option">выберете фильм</option>
-                <option value="" class="option">выберете фильм</option>
-                <option value="" class="option">выберете фильм</option>
-            </select>
+            <div class="container_for_sale" id="container-for-sale">
+                <div class="info-card film" id="info_card_film">
+                </div>
+
+                <div class="info-card room" id="info_card_room">
+                </div>
+            </div>
             <input type="submit" value="Отправить" class="btn">
         </form>
     </article>
-    <script type="text/javascript" src="js/ie_style.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8.3.0/dist/polyfill.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.6.20/dist/fetch.umd.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.filter"></script>
+    <script src="js/adress_logic.js"></script>
+    <script src="js/main_logic.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

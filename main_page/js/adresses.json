@@ -1,0 +1,23 @@
+[
+    {
+        "id" : 1,
+        "header" : "Комната 1",
+        "people": "6",
+        "adress": "ул. Несуществующая 1",
+        "img": "res/location.png"
+    },
+    {
+        "id" : 2,
+        "header" : "Комната 2",
+        "people": "7",
+        "adress": "ул. Несуществующая 2",
+        "img": "res/location.png"
+    },
+    {
+        "id" : 3,
+        "header" : "Комната 3",
+        "people": "4",
+        "adress": "ул. Несуществующая 3",
+        "img": "res/location.png"
+    }
+]
