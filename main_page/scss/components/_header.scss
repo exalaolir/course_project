@@ -46,7 +46,7 @@
   color: $fontColorMain;
 }
 
-.hamb {
+.menu_list {
     display: flex;
     align-items: center;
     @include media(min, lg){
@@ -54,11 +54,22 @@
     }
   }
 
-  .hamb__field {
+  .menu_list_anim {
     padding: 10px 20px;
     cursor: pointer;
+ 
   }
-
+  .active{
+    .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .bar:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+  }
   .bar {
     display: block;
     width: 30px;
@@ -68,7 +79,7 @@
     transition: 0.2s;
   }
 
-  .popup {
+  .hanburger {
     position: fixed;
     top: 75px;
     left: 100%;
@@ -82,32 +93,20 @@
         flex-direction: column;
         align-items: center;
     }
+    .menu {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      padding: 50px 0;
+      overflow: auto;
+    }
   }
 
-  .popup.open {
+  .open {
     left: 0;
-  }
-
-  .popup .menu {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    padding: 50px 0;
-    overflow: auto;
-  }
-  .hamb__field.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamb__field.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .hamb__field.active .bar:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
   }
 
   body.noscroll {
@@ -119,7 +118,7 @@
     @include font_property($h_3_size, $regulr_font);
     padding-left: 0;
   }
-  .pop_item{
+  .hanburger_item{
     margin-bottom: 4rem;
     font-size: 24px;
   }

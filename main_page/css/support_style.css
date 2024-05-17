@@ -126,17 +126,17 @@ ul {
   box-shadow: 1px 1px 28px 4px rgb(252, 27, 114);
 }
 
-.hamb {
+.menu_list {
   display: flex;
   align-items: center;
 }
 @media only screen and (min-width: 992px) {
-  .hamb {
+  .menu_list {
     display: none;
   }
 }
 
-.hamb__field {
+.menu_list_anim {
   padding: 10px 20px;
   cursor: pointer;
 }
@@ -150,7 +150,7 @@ ul {
   transition: 0.2s;
 }
 
-.popup {
+.hanburger {
   position: fixed;
   top: 75px;
   left: 100%;
@@ -162,17 +162,17 @@ ul {
   transition: 0.3s;
 }
 @media only screen and (max-width: 992px) {
-  .popup {
+  .hanburger {
     flex-direction: column;
     align-items: center;
   }
 }
 
-.popup.open {
+.hanburger.open {
   left: 0;
 }
 
-.popup .menu {
+.hanburger .menu {
   width: 100%;
   height: 100%;
   display: flex;
@@ -183,15 +183,15 @@ ul {
   overflow: auto;
 }
 
-.hamb__field.active .bar:nth-child(2) {
+.menu_list_anim.active .bar:nth-child(2) {
   opacity: 0;
 }
 
-.hamb__field.active .bar:nth-child(1) {
+.menu_list_anim.active .bar:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
 
-.hamb__field.active .bar:nth-child(3) {
+.menu_list_anim.active .bar:nth-child(3) {
   transform: translateY(-9px) rotate(-45deg);
 }
 
@@ -206,7 +206,7 @@ body.noscroll {
   padding-left: 0;
 }
 
-.pop_item {
+.hanburger_item {
   margin-bottom: 4rem;
   font-size: 24px;
 }/*# sourceMappingURL=support_style.css.map */

@@ -1,33 +1,18 @@
-var hamb = document.querySelector("#hamb");
-var popup = document.querySelector("#popup");
-var body = document.body;
-// При клике на иконку hamb вызываем ф-ию hambHandler
-hamb.addEventListener("click", hambHandler);
+let menu_list = document.querySelector("#menu_list");
+let hanburger = document.querySelector("#hanburger");
+let body = document.body;
 
-// Выполняем действия при клике ..
-function hambHandler(e) {
-  e.preventDefault();
-  // Переключаем стили элементов при клике
-  popup.classList.toggle("open");
-  hamb.classList.toggle("active");
+menu_list.addEventListener("click", function(){
+  hanburger.classList.toggle("open");
+  menu_list.classList.toggle("active");
   body.classList.toggle("noscroll");
-}
+});
 
-// Здесь мы рендерим элементы в наш попап
-
-// Для каждого элемента меню при клике вызываем ф-ию
-
-// Закрытие попапа при клике на меню
-function closeOnClick() {
-  popup.classList.remove("open");
-  hamb.classList.remove("active");
-  body.classList.remove("noscroll");
-}
-window.addEventListener('resize', function (e) {
-  var width = document.body.clientWidth;
+window.addEventListener('resize', function () {
+  let width = document.body.clientWidth;
   if (width >= 992) {
-    popup.classList.remove("open");
-    hamb.classList.remove("active");
+    hanburger.classList.remove("open");
+    menu_list.classList.remove("active");
     body.classList.remove("noscroll");
   }
 });
